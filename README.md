@@ -6,4 +6,4 @@ distros which do not have vcgencmd installed by default
 
 Docker images are available at: https://cloud.docker.com/repository/docker/thundermagic/rpi_cpu_stats
 
-`docker container run --name rpi_cpu_stats -v /sys:/sys -p 9669:9669 -d thundermagic/rpi_cpu_stats:latest`
+`docker container run --name rpi_cpu_stats -v /sys:/sys:ro -p 9669:9669 -d thundermagic/rpi_cpu_stats:latest`

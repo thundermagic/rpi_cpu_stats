@@ -1,5 +1,5 @@
 # Bind /sys directory on the host to /sys container directory
-FROM arm32v7/python:3.6-alpine
+FROM arm32v7/python:3.7-alpine
 
 WORKDIR /usr/src/app
 
