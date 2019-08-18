@@ -24,7 +24,7 @@ def read_cpu_freq():
                            capture_output=True, text=True).stdout
     cur_freq = run_command(['cat', '/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq'],
                            capture_output=True, text=True).stdout
-    return max_freq, min_freq, cur_freq
+    return int(max_freq) * 1000, int(min_freq) * 1000, int(cur_freq) * 1000
 
 
 if __name__ == '__main__':
