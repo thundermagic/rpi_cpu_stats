@@ -26,3 +26,12 @@ services:
     volumes:
       - /sys:/sys
 ```
+
+After running container, add a scrape job to `prometheus.yml`. Example below
+
+```yaml
+scrape_configs:
+    - job_name: 'rpi_cpu_stats'
+      static_configs:
+      - targets: ['192.168.4.4:9669'] # IP address of the RPi
+```
