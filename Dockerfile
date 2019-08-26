@@ -3,11 +3,9 @@ FROM arm32v7/python:3.7-alpine
 
 WORKDIR /usr/src/app
 
-COPY requirements.txt ./
+RUN pip install prometheus_client
 
-RUN pip install --no-cache-dir -r requirements.txt
-
-COPY . .
+COPY main.py .
 
 CMD [ "python", "./main.py" ]
 
