@@ -1,4 +1,4 @@
-#Prometheus exporter to export raspberry pi cpu stats. 
+# Prometheus exporter to export raspberry pi cpu stats. 
 Exposes CPU temp and CPU max, min and current frequency
 
 It read the stats from files in /sys directory. So this should work without any dependency on vcgencmd command and on 
